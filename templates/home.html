@@ -1,0 +1,10 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">Search for anything</div>
+    <div class="panel-body">
+        <div class="search-form">
+            <input ng-keyup="searchData(crud_search)" type="search" ng-model="crud_search" placeholder="Search..." />
+            <button type="button" class="btn btn-primary btn-lg">Search</button>
+        </div>
+        <rp-autocomplete data="autocomplete_data"></rp-autocomplete>
+    </div>
+</div>

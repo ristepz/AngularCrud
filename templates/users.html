@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">All Users</div>
+    <div class="panel-body">
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <td ng-click="orderPrior('id')">ID</td>
+                <td ng-click="orderPrior('first_name')">First Name</td>
+                <td ng-click="orderPrior('last_name')">Last Name</td>
+                <td ng-click="orderPrior('email')">Email</td>
+                <td ng-click="orderPrior('country')">Country</td>
+                <td ng-click="orderPrior('ip_address')">IP Address</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="user in users | orderBy : orderPriority">
+                <td>{{user.id}}</td>
+                <td>{{user.first_name}}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.country}}</td>
+                <td>{{user.ip_address}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

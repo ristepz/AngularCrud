@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Save Some Issue</div>
+    <div class="panel-body">
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="formData.issue_title" placeholder="Title">
+            </div>
+            <div class="form-group">
+                <select class="form-control" ng-model="formData.issue_category">
+                    <option value="">Choose Category</option>
+                    <option ng-repeat="cat in categories | orderBy: '-cat'" value="{{cat}}">{{cat}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="formData.issue_link" placeholder="Link">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" ng-model="formData.issue_description" placeholder="Description"
+                          rows="10"></textarea>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" ng-model="formData.issue_code" placeholder="Sample Code"
+                          rows="10"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="button" ng-click="saveData()" class="btn btn-primary">Save Data</button>
+            </div>
+        </form>
+        <div ng-show="showSuccess" class="alert alert-success" role="alert">Content Added successfully.</div>
+    </div>
+</div>

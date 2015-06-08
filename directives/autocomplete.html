@@ -1,0 +1,22 @@
+<div class="autocomplete-results" ng-hide="!data">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <td>Title</td>
+            <td>Category</td>
+            <td>Link</td>
+            <td>Description</td>
+            <td>Date</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="search in data">
+            <td>{{search.title}}</td>
+            <td>{{search.category}}</td>
+            <td><a href="{{search.link}}" target="_blank">{{search.link}}</a></td>
+            <td>{{search.description}}</td>
+            <td>{{search.date}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
